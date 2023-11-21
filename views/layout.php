@@ -1,7 +1,7 @@
 <?php
 /**
 * @var array $content
- * @var array $sideBar
+ * @var array $sideBarMenu
 */
 ?>
 <!DOCTYPE html>
@@ -21,8 +21,8 @@
             <nav class="menu">
                 <ul>
                     <li class="menu-item"><a href="/" class="menu-link" title="Главная"><span class="span-menu">Главная</span></a></li>
-                    <li class="menu-item"><a href="#" class="menu-link" title="Избранное"><span class="span-menu">Избранное</span></a></li>
-					<?= $sideBar ?>
+                    <li class="menu-item"><a href="favorite.php" class="menu-link" title="Избранное"><span class="span-menu">Избранное</span></a></li>
+					<?=view('pages/sidebar', ['menuItems' => $sideBarMenu]);?>
                 </ul>
             </nav>
         </header>
@@ -34,7 +34,7 @@
                     <button class="search-button">Искать</button>
                 </div>
                 <div class="add-movie-button-container">
-					<button class="add-movie-button"><a href="#" class="add-movie-button-link">Добавить Фильм</a></button>
+					<button class="add-movie-button"><a href="btn-add-movie.php" class="add-movie-button-link">Добавить Фильм</a></button>
                 </div>
             </div>
 

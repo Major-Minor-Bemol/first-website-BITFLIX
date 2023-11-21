@@ -10,6 +10,5 @@ require_once __DIR__ . '/../data-movie/movies.php';
 
 echo view('layout', [
 	'content' => view('pages/details', ['movies' => $movies,]),
-	'sideBar' => view('pages/sidebar', ['genres' => $genres,]),
+	'sideBarMenu' => require_once __DIR__ . '/sidebar.php', ['genres' => $genres]
 ]);
-?>

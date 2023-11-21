@@ -7,7 +7,7 @@
 <?php foreach ($movies as $movie): ?>
 	<div class="movie-item">
 		<div class="images-item-">
-			<img class="movie-img" src="<?= "img/{$movie['id']}.jpg" ;?>" alt="Number movie <?= $movie['id']; ?>">
+			<img class="movie-img" src="<?= "img/{$movie['id']}.jpg" ; ?>" alt="Number movie <?= $movie['id']; ?>">
 		</div>
 		<div class="movie-item-hover">
 			<button class="details-button"><a href="details.php?id=<?= $movie['id']; ?>" class="details-button-link">Подробнее</a></button>

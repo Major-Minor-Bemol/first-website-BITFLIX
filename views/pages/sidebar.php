@@ -1,9 +1,11 @@
 <?php
 /**
- * @var array $genres
+ * @var array $menuItems
  */
 ?>
 
-<?php foreach ($genres as $key => $genre): ?>
-	<li class="menu-item"><a href="sidebar.php?genre=<?= $key ;?>" class="menu-link" title="<?= $genre ?>"><span class="span-menu"><?= $genre ?></span></a></li>
-<?php endforeach; ?>
+<nav>
+	<?php foreach ($menuItems as $menuItem): ?>
+		<li class="menu-item"><a href="<?= $menuItem['url']; ?>" class="menu-link"><?= $menuItem['ruNameGenre']; ?></a></li>
+	<?php endforeach; ?>
+</nav>
