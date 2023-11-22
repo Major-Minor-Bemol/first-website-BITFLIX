@@ -22,7 +22,7 @@
                 <ul>
 <!--                    <li class="menu-item"><a href="/" class="menu-link" title="Главная"><span class="span-menu">Главная</span></a></li>-->
 <!--                    <li class="menu-item"><a href="favorite.php" class="menu-link" title="Избранное"><span class="span-menu">Избранное</span></a></li>-->
-					<?=view('pages/sidebar', ['menuItems' => $sideBarMenu]);?>
+					<?= view("pages/sidebar", ["menuItems" => $sideBarMenu]); ?>
                 </ul>
             </nav>
         </header>
