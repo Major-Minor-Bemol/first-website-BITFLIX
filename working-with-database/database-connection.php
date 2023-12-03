@@ -8,12 +8,6 @@ function getDbConnection()
 
 	if ($connection === null)
 	{
-
-		// $dbHost = "127.0.0.1";
-		// $dbUser = "root";
-		// $dbPassword = "";
-		// $dbName = "movie";
-
 		$dbHost = option("DB_HOST");
 		$dbUser = option("DB_USER");
 		$dbPassword = option("DB_PASSWORD");
