@@ -1,9 +1,7 @@
 <?php
-require_once __DIR__ . "/../data-movie/movies.php";
+require_once __DIR__ . "/../working-with-database/function-get-genres.php";
 
-/**
- * @var array $genres
- */
+$genres = getAllGenres();
 
 foreach ($genres as $engNameGenre => $ruNameGenre)
 {

@@ -56,7 +56,7 @@
 				<div class="container-var-year-dir-act">
 					<div class="year"><?= $movies[$resultingIdFromSearchBar - 1]["release-date"] ?></div>
 					<div class="director"><?= $movies[$resultingIdFromSearchBar - 1]["director"] ?></div>
-					<div class="actor"><?= implode(', ', $movies[$resultingIdFromSearchBar - 1]["cast"]) ?></div>
+					<div class="actor"><?= str_replace(',', ', ', $movies[$resultingIdFromSearchBar - 1]["cast"]) ?></div>
 				</div>
 			</div>
 			<div class="text1">
