@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../service/configuration-service.php";
 
-function getDbConnection()
+function getDbConnection(): mysqli
 {
 	static $connection = null;
 

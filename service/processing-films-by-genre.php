@@ -1,18 +1,24 @@
 <?php
-function getArrayFilmsByGenre(string $resultGenre, array $movies, array $genres)
+function getArrayFilmsByGenre(string $resultGenre, array $movies, array $genres): array
 {
-	$FilmsBySelectedGenre = [];
+	$filmsBySelectedGenre = [];
+
+	$movies = array_map(function($movie)
+	{
+		$movie["genres"] = explode(',', $movie["genres"]);
+		return $movie;
+	}, $movies);
 
 	foreach ($movies as $movie)
 	{
 		if (isset($genres[$resultGenre]) && in_array($genres[$resultGenre], $movie["genres"], true))
 		{
-			$FilmsBySelectedGenre[] = $movie;
+			$filmsBySelectedGenre[] = $movie;
 		}
-		elseif($resultGenre === '')
+		elseif ($resultGenre === '')
 		{
-			$FilmsBySelectedGenre[] = $movie;
+			$filmsBySelectedGenre[] = $movie;
 		}
 	}
-	return $FilmsBySelectedGenre;
+	return $filmsBySelectedGenre;
 }

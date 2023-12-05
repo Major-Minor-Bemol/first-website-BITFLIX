@@ -1,6 +1,6 @@
 <?php
 
-function option(string $name, $defaultValue = null)
+function option(string $name, $defaultValue = null): string
 {
 	static $config = null;
 
@@ -10,7 +10,9 @@ function option(string $name, $defaultValue = null)
 		if (file_exists(__DIR__ . "/../config/config-local.php"))
 		{
 			$localConfig = require_once __DIR__ . "/../config/config-local.php";
-		} else{
+		}
+		else
+		{
 			$localConfig = [];
 		}
 

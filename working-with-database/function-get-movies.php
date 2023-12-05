@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/database-connection.php";
 
-function getListMovies (): array
+function getListMovies(): array
 {
 	$connection = getDbConnection();
 
@@ -50,8 +50,9 @@ function getListMovies (): array
 			"description" => $row["DESCRIPTION"],
 			"duration" => $row["DURATION"],
 
-			"genres" => explode(",", $row["Genres"]), // преобразовываем в массив, т.к. ф-я getArrayFilmsByGenre ждёт 2-м параметром именно его.
+			"genres" => $row["Genres"],
 			"cast" => $row["Actors"],
+
 			"director" => $row["Director"],
 
 			"age-restriction" => $row["AGE_RESTRICTION"],
